@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Termux টিউটোরিয়াল — Install & Basic Commands (বাংলা + English)</title>
+  <meta name="description" content="বাংলা ও ইংরেজিতে Termux ইনস্টল ও বেসিক কমান্ড গাইড — step-by-step commands, common fixes, and examples for pkg, git, python.">
+  <link rel="icon" href="data:,">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Termux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Termux is a terminal emulator and Linux environment for Android that allows you to install packages and run command-line tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Termux কী?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Termux হলো Android-এ একটি টার্মিনাল এমুলেটর ও লিনাক্স পরিবেশ যা প্যাকেজ ইনস্টল ও কমান্ড-লাইন টুল চালাতে দেয়।"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I install Termux?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install Termux from F-Droid or the official APK, then run 'pkg update' and 'pkg upgrade'. Use 'termux-setup-storage' to grant storage permission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "কিভাবে Termux ইনস্টল করবো?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "F-Droid বা অফিসিয়াল APK থেকে ইনস্টল করুন। ইনস্টল করার পরে 'pkg update' ও 'pkg upgrade' চালান এবং 'termux-setup-storage' চালিয়ে স্টোরেজ অনুমতি দিন।"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:24px auto;padding:0 16px;color:#111}
+    pre{background:#f6f8fa;padding:12px;border-radius:6px;overflow:auto}
+    h1,h2{color:#0b3d91}
+    .meta{color:#555;font-size:0.95rem}
+    nav{margin-bottom:12px}
+    a.button{display:inline-block;padding:8px 12px;background:#0b3d91;color:#fff;border-radius:6px;text-decoration:none}
+    footer{margin-top:28px;color:#666;font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="button" href="#bn">বাংলা</a>
+    <a class="button" href="#en" style="margin-left:8px;background:#2a6f2a">English</a>
+  </nav>
+
+  <h1 id="en">Termux: What it is and How to Install (Android) — English</h1>
+  <p class="meta">Quick guide: install, first commands, common packages and tips.</p>
+
+  <h2>What is Termux?</h2>
+  <p>Termux is a terminal emulator and lightweight Linux environment for Android. It lets you install packages via <code>pkg</code>/<code>apt</code>, run scripts, and use common command-line tools like <code>git</code> and <code>python</code>.</p>
+
+  <h2>Install (recommended)</h2>
+  <ol>
+    <li>Install from <a href="https://f-droid.org/">F‑Droid</a> or use the official APK distribution.</li>
+    <li>Open Termux and run:
+      <pre>
+pkg update && pkg upgrade
+termux-setup-storage
+      </pre>
+    </li>
+    <li>Grant storage permission when prompted (needed for accessing files on device).</li>
+  </ol>
+
+  <h2>Useful first commands</h2>
+  <pre>
+pkg update && pkg upgrade
+pkg install git
+pkg install python
+termux-setup-storage
+  </pre>
+
+  <h2>Common packages</h2>
+  <ul>
+    <li><code>git</code> — clone repositories</li>
+    <li><code>python</code> — run Python scripts</li>
+    <li><code>openssh</code> — SSH server/client</li>
+  </ul>
+
+  <h2>Quick tips</h2>
+  <ul>
+    <li>Use <code>pkg</code> for most packages; <code>apt</code> also works for advanced tasks.</li>
+    <li>To keep Termux updated regularly run <code>pkg update && pkg upgrade</code>.</li>
+    <li>For persistent services, consider using a VPS — mobile devices are not ideal as 24/7 servers.</li>
+  </ul>
+
+  <hr>
+
+  <h1 id="bn">Termux: কী ও কীভাবে ইনস্টল করবেন (Android) — বাংলা</h1>
+  <p class="meta">সংক্ষিপ্ত গাইড: ইনস্টল, প্রথম কমান্ড, সাধারণ প্যাকেজ ও টিপস।</p>
+
+  <h2>Termux কী?</h2>
+  <p>Termux হলো Android-এর জন্য একটি টার্মিনাল এমুলেটর ও লাইটওয়েট লিনাক্স পরিবেশ। এতে <code>pkg</code>/<code>apt</code> দিয়ে প্যাকেজ ইনস্টল করে স্ক্রিপ্ট চালানো যায় — যেমন <code>git</code> ও <code>python</code>।</p>
+
+  <h2>ইনস্টল (সুপারিশকৃত)</h2>
+  <ol>
+    <li>F‑Droid থেকে ইনস্টল করুন অথবা অফিসিয়াল APK ব্যবহার করুন।</li>
+    <li>Termux খুলে নিচের কমান্ডগুলো চালান:
+      <pre>
+pkg update && pkg upgrade
+termux-setup-storage
+      </pre>
+    </li>
+    <li>স্টোরেজ পারমিশন দিন (প্রয়োজনে) — যাতে আপনি ডিভাইসের ফাইল অ্যাক্সেস করতে পারেন।</li>
+  </ol>
+
+  <h2>প্রথমে চালানোর কমান্ডগুলো</h2>
+  <pre>
+pkg update && pkg upgrade
+pkg install git
+pkg install python
+termux-setup-storage
+  </pre>
+
+  <h2>সাধারণ প্যাকেজ</h2>
+  <ul>
+    <li><code>git</code> — কোড ক্লোন করার জন্য</li>
+    <li><code>python</code> — পাইথন স্ক্রিপ্ট চালানোর জন্য</li>
+    <li><code>openssh</code> — SSH কনফিগার করার জন্য</li>
+  </ul>
+
+  <h2>সাধারণ সমস্যা ও সমাধান</h2>
+  <ul>
+    <li>Permission error: চালান <code>termux-setup-storage</code> এবং অ্যাপের Settings থেকে Storage অনুমতি দিন।</li>
+    <li>Package install fail: ইন্টারনেট সংযোগ চেক করুন, পরে <code>pkg update</code> চালান।</li>
+    <li>Space issue: অপ্রয়োজনীয় ফাইল মুছুন বা SD কার্ড ব্যবহার করুন।</li>
+  </ul>
+
+  <h2>FAQ</h2>
+  <p><strong>Q:</strong> Can I run services (like a web server) on Termux?<br><strong>A:</strong> Yes, lightweight servers can run, but mobile devices are not ideal for 24/7 hosting. For production use consider a proper VPS.</p>
+
+  <footer>
+    <p>Repo: <a href="https://github.com/khanpitpit-sudo/Termux-">khanpitpit-sudo/Termux-</a> — যদি চান আমি এই পেজে আরো বিস্তারিত 1200‑শব্দের টিউটোরিয়াল যোগ করে দেব।</p>
+  </footer>
+</body>
+</html>
