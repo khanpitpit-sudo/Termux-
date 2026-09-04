@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://khanpitpit-sudo.github.io/Termux-/sitemap.xml
